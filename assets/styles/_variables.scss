@@ -1,0 +1,52 @@
+$body-color: #000;
+$color-green: #54C2A1;
+$color-red: #F8002E;
+$color-red-soft: #E72A4D;
+$color-red-hover: #CA0025;
+$color-gray: #FAFAFC;
+$color-gray-dark: #99A5AC;
+
+$primary: $color-red;
+
+
+$color-base: $body-color;
+$color-line: #E0E9EE;
+$color-primary: $primary;
+$color-primary-hover: $color-red-hover;
+
+$color-placeholder: #C4C4C4;
+
+$font-family-base: 'TT Norms Pro', sans-serif;
+
+$ff-base: $font-family-base;
+
+$transition-fast: all .1s ease-in-out;
+$transition: all .3s ease-in-out;
+$transition-slow: all .4s ease-in-out;
+
+
+// BOOTSTRAP
+
+//$link-hover-color: $color-primary-hover;
+$link-hover-color: $primary;
+$link-hover-decoration: none;
+
+
+$body-min-width: 360px;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	//lg: 992px,
+	lg: 1024px,
+	//xl: 1200px,
+	xl: 1280px,
+	xxl: 1440px,
+	wide: 1920px,
+);
+
+//$fonts: (
+//	m-h1: (45px 25px 24px 25px),
+//	md: (28px 39px 28px 39px),
+//);

@@ -1,0 +1,15 @@
+// Row
+//
+// Rows contain your columns.
+@if $enable-grid-classes {
+    .row {
+        @include make-row();
+
+        > [class*="__column"], [class*="-column"] {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.svg-icon {
+	$icons-size: (
+		//feature1: (67px, 67px),
+	);
+
+	@each $icon, $size in $icons-size {
+		&--#{$icon} {
+			width: nth($size, 1);
+			height: nth($size, 2);
+		}
+	}
+}
