@@ -28,7 +28,7 @@ export default {
 	],
 	components: true,
 	css: [
-		'bootstrap/scss/_reboot.scss',
+		// 'bootstrap/scss/_reboot.scss',
 		'bootstrap/scss/_grid.scss',
 		'~/assets/styles/reset.scss',
 		'~/assets/styles/_bootstrap-grid-custom.scss',
