@@ -1,15 +1,24 @@
 <template>
 	<div>
 		<Top />
+		<Temple />
+		<Girl />
+		<About />
 	</div>
 </template>
 
 <script>
 import Top from '@/components/Top.vue'
+import Temple from '@/components/Temple.vue'
+import Girl from '@/components/Girl.vue'
+import About from '@/components/About.vue'
 
 export default {
 	components: {
 		Top,
+		Temple,
+		Girl,
+		About,
 	},
 	layout: 'layout',
 }
