@@ -1,13 +1,23 @@
 <template>
 	<div class="top">
 		<div class="container">
-			<h1 class="h1">Хамам</h1>
+			<h1 class="h1">
+				<div class="overflow">
+					<div
+						v-for="(letter, index) in word"
+						class="letter"
+						:class="{ show }"
+						:style="`transition-delay: ${index * 120}ms`">
+						{{ letter }}
+					</div>
+				</div>
+			</h1>
 			<div class="text">
 				мы предлагаем вам посетить роскошную парную с высокой влажностью
 			</div>
 			<div
-				v-for="(text, i) in features"
-				:key="i"
+				v-for="(text, index2) in features"
+				:key="index2"
 
 				class="feature">
 				<div class="feature-body">
@@ -26,7 +36,12 @@ export default {
 			'Улучшение работы сердца и сосудов',
 			'Незабываемые ощущения и потрясающее удовольствие',
 		],
+		word: 'Хамам',
+		show: false,
 	}),
+	mounted() {
+		this.show = true
+	},
 }
 </script>
 
@@ -37,9 +52,11 @@ export default {
 
 	&:after {
 		content: '';
-		@include abs;
-		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100vw;
 		height: 100vh;
+		position: fixed;
 		z-index: -1;
 		background: url('~assets/images/top-bg-xs@2x.jpg') 100% / cover;
 	}
@@ -72,6 +89,20 @@ export default {
 			left: 0;
 			bottom: -22px;
 		}
+
+		.overflow {
+			overflow: hidden;
+		}
+
+		.letter {
+			display: inline-block;
+			transform: translate3d(0px, 100px, 0px);
+			transition: $transition-slow;
+			&.show {
+				transform: translate3d(0px, 0px, 0px);
+			}
+		}
+
 	}
 
 	.text {
