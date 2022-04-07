@@ -1,5 +1,5 @@
 # hamam
-This is a promo page as a part for Grand Spa Aurora website.
+This is a promo page as a part of Grand Spa Aurora website.
 
 STILL MOBILE VERSION ONLY
 
