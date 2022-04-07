@@ -222,9 +222,12 @@
 }
 
 @mixin mob-h2() {
-	font-size: rem(40px);
-	line-height: rem(40px);
-	font-weight: 500;
+	font: rem(30px)/rem(35px) $ff-heading;
+	color: $white;
+
+	span {
+		color: $color-gold;
+	}
 }
 
 @mixin mob-h3() {
