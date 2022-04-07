@@ -321,3 +321,11 @@
 @mixin absolute-contain() {
 	@include abs;
 }
+
+
+@mixin hide-scrollbar() {
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
