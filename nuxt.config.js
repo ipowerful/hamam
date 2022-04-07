@@ -16,6 +16,7 @@ export default {
 		color: '#F8002E',
 	},
 	plugins: [
+		'~/plugins/parallax.js',
 		// '~/plugins/http.js',
 		// '~/plugins/filters.plugin.js',
 		// '~/plugins/helpers.js',
