@@ -48,6 +48,7 @@ export default {
 		}],
 		['@nuxt/image', {
 			dir: 'static/images',
+			staticFilename: '[publicPath]/images/[name]-[hash][ext]',
 			screens: {
 				xs: 360,
 				sm: 576,

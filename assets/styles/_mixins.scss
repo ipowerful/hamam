@@ -213,19 +213,12 @@
 	@include make-container-max-widths();
 }
 
-@mixin abs() {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-}
 
 
 @mixin mob-h1() {
-	font-size: rem(45px);
-	line-height: 1;
-	font-weight: 500;
+	font: rem(70px)/rem(86px) $ff-heading;
+	letter-spacing: -1.4px;
+	text-transform: uppercase;
 }
 
 @mixin mob-h2() {
@@ -297,6 +290,8 @@
 	}
 }
 
+
+
 @mixin img-fluid() {
 	width: 100%;
 	height: auto;
@@ -315,10 +310,14 @@
 	justify-content: center;
 }
 
-@mixin absolute-contain() {
+
+@mixin abs() {
 	position: absolute;
-	top: 0;
 	left: 0;
+	top: 0;
 	width: 100%;
 	height: 100%;
+}
+@mixin absolute-contain() {
+	@include abs;
 }

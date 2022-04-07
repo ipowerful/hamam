@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<Top />
 		<h1 class="f1">Хамам</h1>
 		<h1 class="f2">Хамам</h1>
 		<h1 class="f3">01/13</h1>
