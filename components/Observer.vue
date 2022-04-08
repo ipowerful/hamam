@@ -1,5 +1,7 @@
 <template>
-	<div class="observer" />
+	<div class="observer">
+		<slot />
+	</div>
 </template>
 
 <script>
@@ -12,7 +14,10 @@ export default {
 		const options = this.options || {}
 		this.observer = new IntersectionObserver(([entry]) => {
 			if (entry && entry.isIntersecting) {
-				this.$emit('intersect')
+				this.$emit('enter')
+			}
+			else {
+				this.$emit('leave')
 			}
 		}, options)
 

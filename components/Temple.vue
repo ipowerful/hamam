@@ -1,5 +1,8 @@
 <template>
-	<div class="temple">
+	<observer
+		class="temple"
+		@enter="active = true"
+		@leave="active = false">
 		<div class="container">
 			<h2 class="h2">
 				Уникальное место, <br>
@@ -10,14 +13,12 @@
 				</span>
 			</h2>
 		</div>
-		<Observer
-			@intersect="active = true" />
 		<div class="backdrop">
 			<TempleSvg
 				class="temple-svg"
 				:class="{ active }" />
 		</div>
-	</div>
+	</observer>
 </template>
 
 <script>
