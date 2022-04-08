@@ -1,5 +1,10 @@
 <template>
 	<div class="top">
+		<nuxt-picture
+			class="backdrop"
+			loading="lazy"
+			src="top-bg-xs@2x.jpg"
+			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 		<div class="container">
 			<h1 class="h1">
 				<div class="overflow">
@@ -49,16 +54,15 @@ export default {
 .top {
 	padding-bottom: 85px;
 	color: $white;
+	position: relative;
 
-	&:after {
-		content: '';
+	.backdrop {
 		left: 0;
 		top: 0;
 		width: 100vw;
 		height: 100vh;
 		position: fixed;
 		z-index: -1;
-		background: url('~assets/images/top-bg-xs@2x.jpg') 100% / cover;
 	}
 
 	.h1 {
