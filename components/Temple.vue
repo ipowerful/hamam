@@ -66,7 +66,7 @@ export default {
 		.svg-elem-1 {
 			stroke-dashoffset: 2630px;
 			stroke-dasharray: 2630px;
-			transition: stroke-dashoffset 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+			transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
 		}
 
 		&.active .svg-elem-1 {
@@ -76,7 +76,7 @@ export default {
 		.svg-elem-2 {
 			stroke-dashoffset: 2486.52734375px;
 			stroke-dasharray: 2486.52734375px;
-			transition: stroke-dashoffset 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
+			transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
 		}
 
 		&.active .svg-elem-2 {
@@ -86,7 +86,7 @@ export default {
 		.svg-elem-3 {
 			stroke-dashoffset: 2091.560546875px;
 			stroke-dasharray: 2091.560546875px;
-			transition: stroke-dashoffset 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
+			transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
 		}
 
 		&.active .svg-elem-3 {
@@ -96,7 +96,7 @@ export default {
 		.svg-elem-4 {
 			stroke-dashoffset: 1705.0479736328125px;
 			stroke-dasharray: 1705.0479736328125px;
-			transition: stroke-dashoffset 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s;
+			transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s;
 		}
 
 		&.active .svg-elem-4 {
@@ -106,7 +106,7 @@ export default {
 		.svg-elem-5 {
 			stroke-dashoffset: 1322.76220703125px;
 			stroke-dasharray: 1322.76220703125px;
-			transition: stroke-dashoffset 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s;
+			transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s;
 		}
 
 		&.active .svg-elem-5 {
@@ -116,7 +116,7 @@ export default {
 		.svg-elem-6 {
 			stroke-dashoffset: 984.8401489257812px;
 			stroke-dasharray: 984.8401489257812px;
-			transition: stroke-dashoffset 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s;
+			transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s;
 		}
 
 		&.active .svg-elem-6 {
