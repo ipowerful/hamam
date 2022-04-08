@@ -62,7 +62,7 @@ export default {
 
 body {
 	min-width: $body-min-width;
-	font: rem(18px)/rem(30px) $ff-base;
+	font: 300 rem(18px)/rem(30px) $ff-base;
 
 	background: $color-yellow;
 	color: $color-base;

@@ -1,162 +1,91 @@
-// Text format
-// breakpoint-name: (font-size, line-height, font-weight, margin-bottom, random-css-property, value);
-@mixin media-text($map) {
-	@each $breakpoint, $list in $map {
-		@include media-breakpoint-up($breakpoint) {
+/************* Typography *************/
 
-			@if length($list) >= 1 {
-				$fz: nth($list, 1);
-				@if $fz {
-					font-size: rem($fz);
-				}
-			}
+@mixin mob-h1() {
+	font: rem(70px)/rem(86px) $ff-heading;
+	letter-spacing: -1.4px;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 43px;
 
-			@if length($list) >= 2 {
-				$lh: nth($list, 2);
-				@if $lh {
-					line-height: rem($lh);
-				}
-			}
-
-			@if length($list) >= 3 {
-				$fw: nth($list, 3);
-				@if $fw {
-					font-weight: $fw;
-				}
-			}
-
-			@if length($list) >= 4 {
-				$mb: nth($list, 4);
-				@if $mb {
-					margin-bottom: $mb;
-				}
-			}
-
-			// payload
-			@if length($list) == 6 {
-				$parameter: nth($list, 5);
-				$value: nth($list, 6);
-				#{$parameter}: $value;
-			}
-		}
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100px;
+		height: 1px;
+		background: $color-gold;
+		left: 0;
+		bottom: -22px;
 	}
 }
 
-// Padding through breakpoints
-// breakpoint-name: (...padding-top ...padding-right ...padding-bottom ...padding-left);
-@mixin media-padding($map) {
-	@each $breakpoint, $list in $map {
-		@include media-breakpoint-up($breakpoint) {
-			@if length($list) == 4 {
-				padding: $list;
-			} @else {
-				$pt: nth($list, 1);
-				$pr: nth($list, 2);
-				$pb: nth($list, 3);
-				$pl: nth($list, 4);
+@mixin mob-h2() {
+	font: rem(30px)/rem(35px) $ff-heading;
+	color: $white;
 
-				@if $pt {
-					padding-top: $pt;
-				}
-				@if $pr {
-					padding-right: $pr;
-				}
-				@if $pb {
-					padding-bottom: $pb;
-				}
-				@if $pl {
-					padding-left: $pl;
-				}
-			}
-		}
+	span {
+		color: $color-gold;
 	}
 }
 
-// Vertical padding through breakpoints
-// breakpoint-name: (padding-top padding-bottom);
-@mixin media-vpadding($map) {
-	@each $breakpoint, $list in $map {
-		@include media-breakpoint-up($breakpoint) {
-			$pt: nth($list, 1);
-			$pb: nth($list, 2);
+@mixin mob-h3() {
+	font: 300 rem(30px)/rem(35px) $ff-base;
+	letter-spacing: -1.4px;
+	position: relative;
+	margin-bottom: 45px;
 
-			@if $pt {
-				padding-top: $pt;
-			}
-			@if $pb {
-				padding-bottom: $pb;
-			}
-		}
+	&:after {
+		content: '';
+		position: absolute;
+		width: 95px;
+		height: 1px;
+		background: #0D0054;
+		left: 0;
+		bottom: -22px;
 	}
 }
 
-// Horizontal padding through breakpoints
-// breakpoint-name: (padding-left padding-right);
-@mixin media-hpadding($map) {
-	@each $breakpoint, $list in $map {
-		@include media-breakpoint-up($breakpoint) {
-			$pl: nth($list, 1);
-			$pr: nth($list, 2);
+/************* Position *************/
 
-			@if $pl {
-				padding-left: $pl;
-			}
-			@if $pr {
-				padding-right: $pr;
-			}
-		}
-	}
+@mixin flex-center() {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-// Add with and/or height to element
-// breakpoint-name: (width, ...height, ...css-property, ...value);
-@mixin media-size($map) {
-	@each $breakpoint, $list in $map {
-		@include media-breakpoint-up($breakpoint) {
-
-			@if length($list) >= 1 {
-				$w: nth($list, 1);
-				@if $w {
-					width: $w;
-				}
-			}
-
-			@if length($list) >= 2 {
-				$h: nth($list, 2);
-				@if $h {
-					height: $h;
-				}
-			}
-
-			// payload
-			@if length($list) == 4 {
-				$parameter: nth($list, 3);
-				$value: nth($list, 4);
-				#{$parameter}: $value;
-			}
-		}
-	}
-}
-
-// breakpoint-name: (css-property, value);
-@mixin media-style($map) {
-	@each $breakpoint, $list in $map {
-		@include media-breakpoint-up($breakpoint) {
-			@for $i from 0 to length($list) {
-				@if length($list) % 2 == 0 {
-					@if ($i + 1) % 2 != 0 {
-						$property: nth($list, $i + 1);
-						$value: nth($list, $i + 2);
-						#{$property}: $value;
-					}
-				}
-			}
-		}
-	}
+@mixin flex-center-column() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 
-// mixin shortcodes
+@mixin abs() {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/************* Helpers *************/
+
+
+@mixin hide-scrollbar() {
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@mixin img-fluid() {
+	width: 100%;
+	height: auto;
+}
+
+/************* Mixin Shortcodes *************/
+
 @mixin media-up($name, $breakpoints: $grid-breakpoints) {
 	@include media-breakpoint-up($name, $breakpoints) {
 		@content;
@@ -211,124 +140,4 @@
 
 @mixin c-max() {
 	@include make-container-max-widths();
-}
-
-
-
-@mixin mob-h1() {
-	font: rem(70px)/rem(86px) $ff-heading;
-	letter-spacing: -1.4px;
-	text-transform: uppercase;
-}
-
-@mixin mob-h2() {
-	font: rem(30px)/rem(35px) $ff-heading;
-	color: $white;
-
-	span {
-		color: $color-gold;
-	}
-}
-
-@mixin mob-h3() {
-	font-size: rem(36px);
-	line-height: rem(36px);
-	font-weight: 500;
-}
-
-@mixin mob-h5() {
-	font-size: rem(25px);
-	line-height: rem(30px);
-	font-weight: 500;
-}
-
-@mixin mob-text() {
-	font-size: rem(16px);
-	line-height: rem(24px);
-}
-
-@mixin desk-h1() {
-	font-size: rem(75px);
-	line-height: 1;
-	font-weight: 500;
-}
-
-@mixin desk-h2() {
-	font-size: rem(65px);
-	line-height: 1;
-	font-weight: 400;
-}
-
-@mixin desk-h3() {
-	font-size: rem(55px);
-	line-height: rem(60px);
-	font-weight: 500;
-}
-
-@mixin desk-h5() {
-	font-size: rem(35px);
-	line-height: rem(42px);
-	font-weight: 500;
-}
-
-@mixin desk-text() {
-	font-size: rem(18px);
-	line-height: rem(30px);
-}
-
-
-@mixin heading() {
-	@include mob-h1;
-	margin-bottom: 20px;
-
-	@include up(lg) {
-		@include desk-h1;
-		font-size: rem(75px);
-		margin-bottom: 40px;
-	}
-
-	i {
-		font-style: normal;
-		color: $color-red;
-	}
-}
-
-
-
-@mixin img-fluid() {
-	width: 100%;
-	height: auto;
-}
-
-@mixin flex-center() {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-@mixin flex-center-column() {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-
-@mixin abs() {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-}
-@mixin absolute-contain() {
-	@include abs;
-}
-
-
-@mixin hide-scrollbar() {
-	scrollbar-width: none;
-	&::-webkit-scrollbar {
-		display: none;
-	}
 }
