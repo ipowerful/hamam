@@ -21,25 +21,42 @@
 				Мы предлагаем вам посетить роскошную парную с высокой влажностью
 			</div>
 			<div
-				v-for="(text, index2) in features"
+				v-for="(feature, index2) in features"
 				:key="index2"
-
-				class="feature">
-				<div class="feature-body">
-					{{ text }}
-				</div>
+				class="feature"
+				:class="{ active: feature.active }">
+				<observer
+					class="feature-body"
+					@enter="features[index2].active = true"
+					@leave="features[index2].active = false">
+					{{ feature.text }}
+				</observer>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import Observer from '@/components/Observer.vue'
+
 export default {
+	components: {
+		Observer,
+	},
 	data: () => ({
 		features: [
-			'Очищение тела от токсинов и шлаков',
-			'Улучшение работы сердца и сосудов',
-			'Незабываемые ощущения и потрясающее удовольствие',
+			{
+				text: 'Очищение тела от токсинов и шлаков',
+				active: false,
+			},
+			{
+				text: 'Улучшение работы сердца и сосудов',
+				active: false,
+			},
+			{
+				text: 'Незабываемые ощущения и потрясающее удовольствие',
+				active: false,
+			},
 		],
 		word: 'Хамам',
 		show: false,
@@ -123,6 +140,7 @@ export default {
 			left: 50%;
 			border-radius: 50%;
 			transform: translate(-50%, -50%);
+			transition: $transition-slow;
 		}
 
 		&:before {
@@ -135,6 +153,13 @@ export default {
 			width: 250px;
 			height: 250px;
 			border: 1px solid $white;
+		}
+
+		&.active {
+			&:before,
+			&:after {
+				transform: translate(-50%, -50%) scale3d(1.1, 1.1, 1);
+			}
 		}
 
 		&-body {
