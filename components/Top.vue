@@ -13,7 +13,7 @@
 				</div>
 			</h1>
 			<div class="text">
-				мы предлагаем вам посетить роскошную парную с высокой влажностью
+				Мы предлагаем вам посетить роскошную парную с высокой влажностью
 			</div>
 			<div
 				v-for="(text, index2) in features"
@@ -66,9 +66,6 @@ export default {
 		@include mob-h1;
 
 		margin-top: 84px;
-		margin-bottom: 43px;
-
-		position: relative;
 
 		&:before {
 			position: absolute;
@@ -80,16 +77,6 @@ export default {
 			background: url('~assets/svg/auroragrandspa.svg') 100% / contain no-repeat;
 		}
 
-		&:after {
-			content: '';
-			position: absolute;
-			width: 100px;
-			height: 1px;
-			background: $color-gold;
-			left: 0;
-			bottom: -22px;
-		}
-
 		.overflow {
 			overflow: hidden;
 		}
@@ -98,6 +85,7 @@ export default {
 			display: inline-block;
 			transform: translate3d(0px, 100px, 0px);
 			transition: $transition-slow;
+
 			&.show {
 				transform: translate3d(0px, 0px, 0px);
 			}
