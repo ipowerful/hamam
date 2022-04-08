@@ -38,17 +38,21 @@ export default {
 <style lang="scss">
 .temple {
 	position: relative;
+	overflow: hidden;
 	height: 450px;
 
 	@include flex-center;
 	text-align: center;
+
+	.container {
+		z-index: 1;
+	}
 
 	.backdrop {
 		@include abs;
 		left: 50%;
 		width: 865px;
 		transform: translateX(-50%);
-		z-index: -1;
 		background: #1D144C;
 	}
 
