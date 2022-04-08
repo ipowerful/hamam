@@ -101,6 +101,7 @@ export default {
 		}
 
 		.overflow {
+			display: inline-block;
 			overflow: hidden;
 		}
 
