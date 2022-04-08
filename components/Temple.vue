@@ -1,19 +1,17 @@
 <template>
 	<div class="temple">
-		<intersect
-			@enter="active = true"
-			@leave="active = false">
-			<div class="container">
-				<h2 class="h2">
-					Уникальное место, <br>
-					где вы можете
-					<span>
+		<div class="container">
+			<h2 class="h2">
+				Уникальное место, <br>
+				где вы можете
+				<span>
 					отдохнуть <br>
 					душой и телом
 				</span>
-				</h2>
-			</div>
-		</intersect>
+			</h2>
+		</div>
+		<Observer
+			@intersect="active = true" />
 		<div class="backdrop">
 			<TempleSvg
 				class="temple-svg"
@@ -23,13 +21,13 @@
 </template>
 
 <script>
+import Observer from '@/components/Observer.vue'
 import TempleSvg from '~/assets/svg/temple-animated.svg?inline'
-import Intersect from 'vue-intersect'
 
 export default {
 	components: {
 		TempleSvg,
-		Intersect,
+		Observer,
 	},
 	data: () => ({
 		active: false,
