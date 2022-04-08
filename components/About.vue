@@ -26,7 +26,7 @@
 			<nuxt-picture
 				class="picture"
 				loading="lazy"
-				src="about-2@2x.jpg"
+				src="about-3@2x.jpg"
 				sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 			<h2 class="h2">
 				Уникальное место, <br>
