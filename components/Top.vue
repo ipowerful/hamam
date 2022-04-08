@@ -6,17 +6,22 @@
 			src="top-bg-xs@2x.jpg"
 			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 		<div class="container">
-			<h1 class="h1">
-				<div class="overflow">
-					<div
-						v-for="(letter, index) in word"
-						class="letter"
-						:class="{ show }"
-						:style="`transition-delay: ${index * 120}ms`">
-						{{ letter }}
-					</div>
-				</div>
-			</h1>
+			<observer
+				@enter="show = true"
+				@leave="show = false">
+				<h1 class="h1">
+					<span class="overflow">
+						<span
+							v-for="(letter, index) in word"
+							:key="index"
+							class="letter"
+							:class="{ show }"
+							:style="`transition-delay: ${index * 120}ms`">
+							{{ letter }}
+						</span>
+					</span>
+				</h1>
+			</observer>
 			<div class="text">
 				Мы предлагаем вам посетить роскошную парную с высокой влажностью
 			</div>
@@ -61,9 +66,6 @@ export default {
 		word: 'Хамам',
 		show: false,
 	}),
-	mounted() {
-		this.show = true
-	},
 }
 </script>
 
