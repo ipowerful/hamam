@@ -89,6 +89,10 @@ export default {
 		position: fixed;
 		z-index: -1;
 		background: $color-blue;
+
+		img {
+			@include img-fluid;
+		}
 	}
 
 	.h1 {
@@ -162,6 +166,7 @@ export default {
 			border-radius: 50%;
 			transform: translate(-50%, -50%);
 			transition: $transition-slow;
+			transition-duration: 0.7s;
 		}
 
 		&:before {
