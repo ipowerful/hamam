@@ -88,6 +88,7 @@ export default {
 		height: 100vh;
 		position: fixed;
 		z-index: -1;
+		background: $color-blue;
 	}
 
 	.h1 {
