@@ -6,6 +6,7 @@
 		<gate-top />
 		<about />
 		<gate-bottom />
+		<gallery />
 	</div>
 </template>
 
@@ -16,6 +17,7 @@ import Girl from '@/components/Girl.vue'
 import GateTop from '@/components/GateTop.vue'
 import GateBottom from '@/components/GateBottom.vue'
 import About from '@/components/About.vue'
+import Gallery from '@/components/Gallery.vue'
 
 export default {
 	components: {
@@ -25,6 +27,7 @@ export default {
 		GateTop,
 		GateBottom,
 		About,
+		Gallery,
 	},
 	layout: 'layout',
 }
