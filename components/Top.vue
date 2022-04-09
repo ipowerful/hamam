@@ -32,6 +32,9 @@
 				class="feature"
 				:class="{ active: feature.active }">
 				<observer
+					:options="{
+						rootMargin: '-35% 0px',
+					}"
 					class="feature-body"
 					@enter="features[index2].active = true"
 					@leave="features[index2].active = false">
@@ -161,19 +164,21 @@ export default {
 		&:before {
 			width: 322px;
 			height: 322px;
-			border: 1px solid rgba(240, 208, 136, 0.2);
+			border: 1px solid $color-gold-light;
+			transform: translate(-50%, -50%) scale3d(.78, .78, 1);
 		}
 
 		&:after {
 			width: 250px;
 			height: 250px;
 			border: 1px solid $white;
+			transform: translate(-50%, -50%) scale3d(1.28, 1.28, 1);
 		}
 
 		&.active {
 			&:before,
 			&:after {
-				transform: translate(-50%, -50%) scale3d(1.1, 1.1, 1);
+				transform: translate(-50%, -50%) scale3d(1, 1, 1);
 			}
 		}
 

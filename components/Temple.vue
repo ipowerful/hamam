@@ -1,5 +1,6 @@
 <template>
 	<observer
+		:options="{ threshold: .7 }"
 		class="temple"
 		@enter="active = true"
 		@leave="active = false">
@@ -64,24 +65,25 @@ export default {
 
 	.temple-svg {
 		[class^="svg-elem-"] {
-			transition: all .5s linear 0s;
+			transition: all .3s linear 0s;
 			opacity: 0;
+			stroke: $color-gold-light;
 		}
 
 		.svg-elem-5 {
-			transition-delay: 0.33s;
+			transition-delay: .22s;
 		}
 
 		.svg-elem-4 {
-			transition-delay: 0.66s;
+			transition-delay: .33s;
 		}
 
 		.svg-elem-3 {
-			transition-delay: 0.99s;
+			transition-delay: .44s;
 		}
 
 		.svg-elem-2 {
-			transition-delay: 1.32s;
+			transition-delay: .88s;
 		}
 
 		&.active [class^="svg-elem-"] {

@@ -1,14 +1,11 @@
 $body-color: #000;
 
 
-
-
-
-
-
 $color-base: $body-color;
 $color-gold: #D0B26C;
+$color-gold-light: rgba(240, 208, 136, 0.4);
 $color-yellow: #F0D088;
+
 
 $ff-base: 'Helvetica Neue', sans-serif;
 $ff-number: 'Magnat Head', sans-serif;
@@ -17,9 +14,6 @@ $ff-heading: 'FoglihtenNo06', sans-serif;
 $transition-fast: all .1s ease-in-out;
 $transition: all .3s ease-in-out;
 $transition-slow: all .4s ease-in-out;
-
-
-
 
 
 //
@@ -39,7 +33,6 @@ $transition-slow: all .4s ease-in-out;
 //$color-primary-hover: $color-red-hover;
 //
 //$color-placeholder: #C4C4C4;
-
 
 
 // BOOTSTRAP
