@@ -3,6 +3,7 @@
 		<Top />
 		<Temple />
 		<Girl />
+		<Gate />
 		<About />
 	</div>
 </template>
@@ -11,6 +12,7 @@
 import Top from '@/components/Top.vue'
 import Temple from '@/components/Temple.vue'
 import Girl from '@/components/Girl.vue'
+import Gate from '@/components/Gate.vue'
 import About from '@/components/About.vue'
 
 export default {
@@ -18,6 +20,7 @@ export default {
 		Top,
 		Temple,
 		Girl,
+		Gate,
 		About,
 	},
 	layout: 'layout',
