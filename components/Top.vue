@@ -7,15 +7,16 @@
 			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 		<div class="container">
 			<observer
-				@enter="show = true"
-				@leave="show = false">
-				<h1 class="h1">
-					<span class="overflow">
+				@enter="active = true"
+				@leave="active = false">
+				<h1
+					:class="{ active }"
+					class="h1">
+					<span class="word">
 						<span
 							v-for="(letter, index) in word"
 							:key="index"
 							class="letter"
-							:class="{ show }"
 							:style="`transition-delay: ${index * 120}ms`">
 							{{ letter }}
 						</span>
@@ -64,7 +65,7 @@ export default {
 			},
 		],
 		word: 'Хамам',
-		show: false,
+		active: false,
 	}),
 }
 </script>
@@ -85,32 +86,43 @@ export default {
 	}
 
 	.h1 {
-		display: inline-block;
 		@include mob-h1;
 
-		margin-top: 84px;
+		margin-top: 48px;
+		padding-top: 36px;
 
-		&:before {
-			position: absolute;
-			top: -34px;
-			right: -56px;
-			width: 70px;
-			height: 41px;
-			content: '';
-			background: url('~assets/svg/auroragrandspa.svg') 100% / contain no-repeat;
-		}
-
-		.overflow {
+		.word {
 			display: inline-block;
-			overflow: hidden;
+			position: relative;
+
+			&:before {
+				position: absolute;
+				top: -34px;
+				right: -56px;
+				width: 70px;
+				height: 41px;
+				content: '';
+				background: url('~assets/svg/auroragrandspa.svg') 100% / contain no-repeat;
+				transition: $transition-slow;
+				transition-delay: 0.8s;
+				transform: scale3d(0, 0, 1);
+			}
 		}
 
 		.letter {
 			display: inline-block;
 			transform: translate3d(0px, 100px, 0px);
 			transition: $transition-slow;
+		}
 
-			&.show {
+		&.active {
+			.word {
+				&:before {
+					transform: scale3d(1, 1, 1);
+				}
+			}
+
+			.letter {
 				transform: translate3d(0px, 0px, 0px);
 			}
 		}

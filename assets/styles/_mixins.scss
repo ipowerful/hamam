@@ -5,7 +5,9 @@
 	letter-spacing: -1.4px;
 	text-transform: uppercase;
 	position: relative;
-	margin-bottom: 43px;
+	padding-bottom: 23px;
+	margin-bottom: 20px;
+	overflow: hidden;
 
 	&:after {
 		content: '';
@@ -14,7 +16,17 @@
 		height: 1px;
 		background: $color-gold;
 		left: 0;
-		bottom: -22px;
+		bottom: 1px;
+		overflow: hidden;
+		transition: $transition-slow;
+		transition-delay: .8s;
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	&.active {
+		&:after {
+			transform: translate3d(0, 0, 0);
+		}
 	}
 }
 
