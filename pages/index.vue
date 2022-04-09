@@ -1,10 +1,11 @@
 <template>
 	<div>
-		<Top />
-		<Temple />
-		<Girl />
-		<Gate />
-		<About />
+		<top />
+		<temple />
+		<girl />
+		<gate-top />
+		<about />
+		<gate-bottom />
 	</div>
 </template>
 
@@ -12,7 +13,8 @@
 import Top from '@/components/Top.vue'
 import Temple from '@/components/Temple.vue'
 import Girl from '@/components/Girl.vue'
-import Gate from '@/components/Gate.vue'
+import GateTop from '@/components/GateTop.vue'
+import GateBottom from '@/components/GateBottom.vue'
 import About from '@/components/About.vue'
 
 export default {
@@ -20,13 +22,13 @@ export default {
 		Top,
 		Temple,
 		Girl,
-		Gate,
+		GateTop,
+		GateBottom,
 		About,
 	},
 	layout: 'layout',
 }
 </script>
-
 
 <style lang="scss">
 .f1 {

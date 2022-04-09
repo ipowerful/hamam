@@ -49,13 +49,6 @@
 				благотворное влияние прогревает внутренние органы и очищает дыхательные пути.
 			</p>
 		</div>
-		<nuxt-picture
-			class="picture"
-			loading="lazy"
-			width="360"
-			height="415"
-			src="about-bottom.png"
-			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 	</div>
 </template>
 
@@ -72,6 +65,7 @@ export default {
 <style lang="scss">
 .about {
 	background: $color-yellow;
+	padding-bottom: 30px;
 
 	.picture {
 		img {
