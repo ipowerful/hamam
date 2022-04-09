@@ -85,14 +85,13 @@ export default {
 		'~/assets/styles/_bootstrap-grid-custom.scss',
 		'~/assets/styles/_svg-icon.scss',
 	],
-	buildModules: [
-		'@nuxtjs/device',
-	],
+	// buildModules: [
+	// 	'@nuxtjs/device',
+	// ],
 	modules: [
-		'@nuxtjs/axios',
+		// '@nuxtjs/axios',
 		'@nuxtjs/style-resources',
 		'@nuxtjs/svg',
-		'@nuxt/content',
 		['@nuxtjs/svg-sprite', {
 			elementClass: 'svg-icon',
 			spriteClassPrefix: '',
@@ -130,9 +129,9 @@ export default {
 			'~/assets/styles/_mixins.scss',
 		],
 	},
-	axios: {
-		baseURL: '/',
-	},
+	// axios: {
+	// 	baseURL: '/',
+	// },
 
 	router: {
 		prefetchLinks: false,
