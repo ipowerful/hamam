@@ -52,8 +52,8 @@
 			<nuxt-picture
 				class="picture"
 				loading="lazy"
-				width="720"
-				height="800"
+				width="360"
+				height="400"
 				src="about-3@2x.jpg"
 				sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 			<h2 class="h2">
@@ -81,6 +81,8 @@
 		<nuxt-picture
 			class="picture"
 			loading="lazy"
+			width="360"
+			height="415"
 			src="about-bottom.png"
 			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 	</div>

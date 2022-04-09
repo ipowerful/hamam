@@ -10,7 +10,7 @@
 		"build": "nuxt build --modern=server",
 		"netlify": "netlify dev",
 		"start": "nuxt start",
-		"generate": "nuxt generate",
+		"generate": "nuxt generate --modern=server",
 		"analyze": "nuxt build -a",
 		"lintall": "eslint --ext .js,.vue --ignore-path .gitignore .",
 		"fintall": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
