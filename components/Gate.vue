@@ -8,20 +8,17 @@
 			src="about-bg@2x.jpg"
 			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 
-
-		<!--		<nuxt-picture-->
-		<!--			v-parallax="0.05"-->
-		<!--			class="petal"-->
-		<!--			loading="lazy"-->
-		<!--			width="230px"-->
-		<!--			height="216px"-->
-		<!--			src="petal-6@2x.png"-->
-		<!--			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />-->
-
+		<div
+			v-parallax="0.15"
+			class="petal4" />
 
 		<div
-			v-parallax="0.1"
-			class="petal" />
+			v-parallax="0.35"
+			class="petal5" />
+
+		<div
+			v-parallax="0.2"
+			class="petal6" />
 
 		<nuxt-picture
 			v-parallax="0.01"
@@ -72,14 +69,34 @@ export default {
 		}
 	}
 
-	.petal {
+	.petal4 {
+		position: absolute;
+		z-index: 10;
+		left: 0%;
+		top: 25%;
+		width: 99px;
+		height: 159px;
+		background: url('~assets/images/petal-4.png') no-repeat;
+	}
+
+	.petal5 {
 		position: absolute;
 		z-index: 2;
 		left: 15.5%;
 		top: 65%;
 		width: 115px;
 		height: 108px;
-		background: url('~assets/images/flowers-bg5.png') 100% / cover no-repeat;
+		background: url('~assets/images/petal-5.png') no-repeat;
+	}
+
+	.petal6 {
+		z-index: 10;
+		position: absolute;
+		width: 65px;
+		height: 62px;
+		right: 7%;
+		top: 7%;
+		background: url('~assets/images/petal-6.png') no-repeat;
 	}
 
 	.shard {
@@ -88,9 +105,6 @@ export default {
 		left: 15%;
 		top: 16%;
 		width: 69%;
-		//height: 62%;
-		//padding-top: 77%;
-		//background: url('~assets/images/shard-1@2x.png') 100% / cover no-repeat;
 
 		img {
 			@include img-fluid;
@@ -99,14 +113,10 @@ export default {
 
 	.shard-shape {
 		@include abs;
-		//position: absolute;
 		width: 69%;
 		left: 18%;
 		top: 18.5%;
-		//width: 249px;
-		//height: 280px;
 		z-index: 1;
-		//background: url('~assets/svg/about-gate-shape.svg') 100% / cover no-repeat;
 	}
 }
 </style>
