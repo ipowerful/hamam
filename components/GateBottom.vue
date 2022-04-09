@@ -15,15 +15,14 @@
 			class="petal7" />
 
 		<div
-			v-parallax="0.35"
+			v-parallax="0.3"
 			class="petal8" />
 
 		<div
-			v-parallax="0.15"
+			v-parallax="0.05"
 			class="petal9" />
 
 		<nuxt-picture
-			v-parallax="0.01"
 			class="shard"
 			width="248px"
 			height="298px"
@@ -32,11 +31,9 @@
 			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 
 		<div
-			v-parallax="0.01"
 			class="shard-shape">
 			<gate-svg />
 		</div>
-
 	</div>
 </template>
 
@@ -58,7 +55,7 @@ export default {
 	position: relative;
 
 	#gateBottomClipPath {
-		transform: scale(0.0028, 0.0032);
+		transform: scale(0.0028, 0.00322);
 	}
 
 	.backdrop {
@@ -73,14 +70,14 @@ export default {
 		position: absolute;
 		width: 61px;
 		height: 142px;
-		right: 0%;
+		right: 0;
 		top: -14%;
 		background: url('~assets/images/petal-7.png') no-repeat;
 	}
 
 	.petal8 {
 		position: absolute;
-		z-index: 2;
+		z-index: 15;
 		left: 23%;
 		bottom: -27%;
 		width: 115px;
@@ -90,9 +87,9 @@ export default {
 
 	.petal9 {
 		position: absolute;
-		z-index: 10;
+		z-index: 1;
 		left: 2%;
-		bottom: -20%;
+		bottom: -18%;
 		width: 180px;
 		height: 207px;
 		background: url('~assets/images/petal-9.png') no-repeat;
