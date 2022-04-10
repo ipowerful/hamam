@@ -1,49 +1,128 @@
 <template>
 	<div class="girl">
+		<nuxt-picture
+			class="backdrop"
+			loading="lazy"
+			width="360px"
+			height="420px"
+			src="girl-bg@2x.jpg"
+			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
+
 		<div
-			v-parallax="0.1"
-			class="bg flowers1" />
-		<div
-			v-parallax="0.15"
-			class="bg steam" />
+			v-parallax="0.25"
+			class="petal1" />
+
 		<div
 			v-parallax="0.2"
-			class="bg flowers2" />
+			class="petal2" />
+
 		<div
-			v-parallax="0.3"
-			class="bg flowers3" />
+			v-parallax="0.1"
+			class="petal3" />
+
+		<nuxt-picture
+			class="body"
+			loading="lazy"
+			width="360px"
+			height="420px"
+			src="girl@2x.png"
+			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
+
+		<div class="holder">
+			<nuxt-picture
+				v-parallax="0.06"
+				class="steam1"
+				loading="lazy"
+				width="456px"
+				height="438px"
+				src="steam-1.png"
+				sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
+
+			<nuxt-picture
+				v-parallax="0.08"
+				class="steam2"
+				loading="lazy"
+				width="351px"
+				height="289px"
+				src="steam-1.png"
+				sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
+		</div>
 	</div>
 </template>
 
 <script>
-export default {}
 </script>
 
 <style lang="scss">
 .girl {
-	height: 420px;
-	background: url('~assets/images/girl-bg-xs@2x.jpg') center / cover no-repeat;
 	position: relative;
-	overflow: hidden;
 
-	.bg {
+	.backdrop {
+		img {
+			@include img-fluid;
+		}
+	}
+
+	.holder {
 		@include abs;
+		overflow: hidden;
 	}
 
-	.steam {
-		background: url('~assets/images/steam.png') center / cover no-repeat;
+	.steam1 {
+		position: absolute;
+		left: -50%;
+		top: -25%;
+		width: 456px;
+		height: 438px;
 	}
 
-	.flowers1 {
-		background: url('~assets/images/flowers-bg1.png') left center no-repeat;
+	.steam2 {
+		position: absolute;
+		left: 40%;
+		bottom: 5%;
+		width: 351px;
+		height: 289px;
+		z-index: 2;
 	}
 
-	.flowers2 {
-		background: url('~assets/images/flowers-bg2.png') left bottom no-repeat;
+	.petal1 {
+		position: absolute;
+		width: 127px;
+		height: 209px;
+		left: 5%;
+		bottom: -4%;
+		z-index: 1;
+		background: url('~assets/images/petal-1.png') no-repeat;
 	}
 
-	.flowers3 {
-		background: url('~assets/images/flowers-bg3.png') right top no-repeat;
+	.petal2 {
+		z-index: 10;
+		position: absolute;
+		width: 123px;
+		height: 250px;
+		left: 0;
+		top: 27%;
+		background: url('~assets/images/petal-2.png') no-repeat;
 	}
+
+	.petal3 {
+		z-index: 10;
+		position: absolute;
+		width: 111px;
+		height: 144px;
+		right: 0;
+		top: 7%;
+		background: url('~assets/images/petal-3.png') no-repeat;
+	}
+
+	.body {
+		@include abs;
+		z-index: 1;
+
+		img {
+			@include img-fluid;
+		}
+	}
+
 }
 </style>

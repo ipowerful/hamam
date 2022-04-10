@@ -1,0 +1,119 @@
+<template>
+	<div class="gate-top">
+		<nuxt-picture
+			class="backdrop"
+			loading="lazy"
+			width="718px"
+			height="620px"
+			src="gate-bg@2x.jpg"
+			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
+
+		<div
+			v-parallax="0.15"
+			class="petal4" />
+
+		<div
+			v-parallax="0.35"
+			class="petal5" />
+
+		<div
+			v-parallax="0.2"
+			class="petal6" />
+
+		<nuxt-picture
+			class="shard"
+			width="248px"
+			height="279px"
+			loading="lazy"
+			src="shard-top@2x.png"
+			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
+
+		<div
+			class="shard-shape">
+			<gate-svg />
+		</div>
+
+		<clip-path-svg />
+	</div>
+</template>
+
+<script>
+import GateSvg from '@/assets/svg/gate-top.svg?inline'
+import ClipPathSvg from '@/assets/svg/gate-top-clip-path.svg?inline'
+
+export default {
+	components: {
+		GateSvg,
+		ClipPathSvg,
+	},
+}
+</script>
+
+<style lang="scss">
+.gate-top {
+	background: $color-yellow;
+	padding-bottom: 100px;
+	position: relative;
+
+	#gateTopClipPath {
+		transform: scale(0.0028, 0.0033);
+	}
+
+	.backdrop {
+		img {
+			clip-path: url(#gateTopClipPath);
+			@include img-fluid;
+		}
+	}
+
+	.petal4 {
+		position: absolute;
+		z-index: 10;
+		left: 0%;
+		top: 25%;
+		width: 99px;
+		height: 159px;
+		background: url('~assets/images/petal-4.png') no-repeat;
+	}
+
+	.petal5 {
+		position: absolute;
+		z-index: 2;
+		left: 15.5%;
+		top: 65%;
+		width: 115px;
+		height: 108px;
+		background: url('~assets/images/petal-5.png') no-repeat;
+	}
+
+	.petal6 {
+		z-index: 10;
+		position: absolute;
+		width: 65px;
+		height: 62px;
+		right: 7%;
+		top: 7%;
+		background: url('~assets/images/petal-6.png') no-repeat;
+	}
+
+	.shard {
+		position: absolute;
+		z-index: 2;
+		left: 15%;
+		top: 16%;
+		width: 69%;
+
+		img {
+			@include img-fluid;
+		}
+	}
+
+	.shard-shape {
+		@include abs;
+		width: 69%;
+		top: 18.5%;
+		left: 18%;
+		z-index: 1;
+	}
+}
+</style>

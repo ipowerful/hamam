@@ -55,7 +55,7 @@ export default {
 		left: 50%;
 		width: 865px;
 		transform: translateX(-50%);
-		background: #1D144C;
+		background: $color-blue;
 	}
 
 	.h2 {

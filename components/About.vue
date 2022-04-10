@@ -1,14 +1,9 @@
 <template>
 	<div class="about">
-		<nuxt-picture
-			class="picture"
-			loading="lazy"
-			src="about-top.png"
-			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 		<div class="text">
-			<h3 class="h3">
+			<heading>
 				Хамам - особый ритуал
-			</h3>
+			</heading>
 			<p>
 				На Востоке посещение хаммама считается не просто способом поддержания здоровья, а особым ритуалом.
 			</p>
@@ -26,9 +21,13 @@
 			<nuxt-picture
 				class="picture"
 				loading="lazy"
-				src="about-3@2x.jpg"
+				width="360"
+				height="400"
+				src="about@2x.jpg"
 				sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
-			<h2 class="h2">
+			<h2
+				v-parallax="0.1"
+				class="h2">
 				Уникальное место, <br>
 				где вы можете
 				<span>
@@ -38,9 +37,9 @@
 			</h2>
 		</div>
 		<div class="text">
-			<h3 class="h3">
+			<heading>
 				Пространство наслаждения
-			</h3>
+			</heading>
 			<p>
 				Благодаря целительному пару, это пространство наслаждения, помогает вывести токсины, очистить поры,
 				стабилизировать давление и привести в порядок мысли.
@@ -50,32 +49,28 @@
 				благотворное влияние прогревает внутренние органы и очищает дыхательные пути.
 			</p>
 		</div>
-		<nuxt-picture
-			class="picture"
-			loading="lazy"
-			src="about-bottom.png"
-			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 	</div>
 </template>
 
 <script>
-export default {}
+import Heading from '@/components/Heading.vue'
+
+export default {
+	components: {
+		Heading,
+	},
+}
 </script>
 
 <style lang="scss">
 .about {
 	background: $color-yellow;
+	padding-bottom: 30px;
 
 	.picture {
 		img {
-			width: 100%;
-			height: auto;
+			@include img-fluid;
 		}
-	}
-
-	.h3 {
-		@include mob-h3;
-		color: #0D0054;
 	}
 
 	p {
@@ -98,7 +93,7 @@ export default {}
 		bottom: 0;
 		width: 100%;
 		text-align: center;
-		padding: 35px;
+		padding: 50px 15px;
 		@include mob-h2;
 
 		&:before {

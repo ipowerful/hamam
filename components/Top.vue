@@ -3,6 +3,8 @@
 		<nuxt-picture
 			class="backdrop"
 			loading="lazy"
+			width="360"
+			height="700"
 			src="top-bg-xs@2x.jpg"
 			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 		<div class="container">
@@ -86,6 +88,11 @@ export default {
 		height: 100vh;
 		position: fixed;
 		z-index: -1;
+		background: $color-blue;
+
+		img {
+			@include img-fluid;
+		}
 	}
 
 	.h1 {
@@ -159,6 +166,7 @@ export default {
 			border-radius: 50%;
 			transform: translate(-50%, -50%);
 			transition: $transition-slow;
+			transition-duration: 0.7s;
 		}
 
 		&:before {

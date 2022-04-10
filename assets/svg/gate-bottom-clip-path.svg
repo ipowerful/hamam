@@ -1,0 +1,8 @@
+<svg width="0px" height="0px">
+	<defs>
+		<clipPath id="gateBottomClipPath" clipPathUnits="objectBoundingBox">
+			<path
+				d="M98.4703 0H0V311H360V0H282.843C302.591 21.9561 314.608 51.0054 314.608 82.8608V237.453H66.7051V82.8608C66.7051 51.0054 78.7221 21.9561 98.4703 0Z"/>
+		</clipPath>
+	</defs>
+</svg>
