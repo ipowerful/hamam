@@ -25,5 +25,5 @@ https://main--charming-travesseiro-d30662.netlify.app/
 - Mobile first
 - Responsive
 - Parallax
-- Animation
+- CSS Animation (GPU accelerated)
 - Website Speed Optimization (as much as possible for Nuxt.js)
