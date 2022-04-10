@@ -66,48 +66,48 @@ export default {
 		z-index: 1;
 		background: url('~assets/svg/gallery-overlay.svg') bottom repeat-x;
 	}
-}
+	
+	.hooper {
+		height: auto;
 
-.hooper {
-	height: auto;
+		.hooper-pagination {
+			position: absolute;
+			left: 20px;
+			right: auto;
+			bottom: 20px;
 
-	.hooper-pagination {
-		position: absolute;
-		left: 20px;
-		right: auto;
-		bottom: 20px;
+			transform: translateX(0);
 
-		transform: translateX(0);
+			color: $color-gold;
+			font: rem(20px)/rem(30px) $ff-number;
+			letter-spacing: -1.4px;
 
-		color: $color-gold;
-		font: rem(20px)/rem(30px) $ff-number;
-		letter-spacing: -1.4px;
+			span {
+				padding-right: 10px;
 
-		span {
-			padding-right: 10px;
-
-			&:first-child {
-				color: $white;
-				font-size: rem(50px);
-				line-height: 1;
-				padding-right: 6px;
+				&:first-child {
+					color: $white;
+					font-size: rem(50px);
+					line-height: 1;
+					padding-right: 6px;
+				}
 			}
 		}
-	}
 
-	.hooper-slide {
-		position: relative;
-	}
-
-	.hooper-navigation {
-		position: absolute;
-		right: 20px;
-		bottom: 20px;
-
-		.hooper-prev,
-		.hooper-next {
+		.hooper-slide {
 			position: relative;
-			transform: none;
+		}
+
+		.hooper-navigation {
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+
+			.hooper-prev,
+			.hooper-next {
+				position: relative;
+				transform: none;
+			}
 		}
 	}
 }
