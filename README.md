@@ -1,6 +1,6 @@
 # Hamam Promo Page
 
-One of my clients requested a promo page for his wellness website. 
+One of my clients requested a promo page for his wellness website.
 
 That's what he's got.
 
@@ -13,8 +13,17 @@ https://main--charming-travesseiro-d30662.netlify.app/
 
 ## Technologies
 
-HTML5, CSS3, SCSS, Bootstrap (grid-framework only), Nuxt.js, JAMStack :).
+- HTML5
+- CSS3
+- SCSS
+- Bootstrap (grid-framework only)
+- Nuxt.js
+- JAMStack :)
 
 ## Features
 
-Primitive animation, Parallax, Mobile first. 
+- Mobile first
+- Responsive
+- Parallax
+- Animation
+- Website Speed Optimization (as much as possible for Nuxt.js)
