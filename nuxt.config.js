@@ -67,35 +67,21 @@ export default {
 	},
 	plugins: [
 		'~/plugins/parallax.js',
-		// '~/plugins/http.js',
-		// '~/plugins/filters.plugin.js',
-		// '~/plugins/helpers.js',
-		// '~/plugins/element-ui.js',
-		// '~/plugins/vuelidate.js',
-		// {
-		// 	src: '~/plugins/nuxt-client-init.js',
-		// 	mode: 'client',
-		// },
 	],
 	components: true,
 	css: [
-		// 'bootstrap/scss/_reboot.scss',
 		'bootstrap/scss/_grid.scss',
 		'~/assets/styles/reset.scss',
 		'~/assets/styles/_bootstrap-grid-custom.scss',
 		'~/assets/styles/_svg-icon.scss',
 	],
-	// buildModules: [
-	// 	'@nuxtjs/device',
-	// ],
 	modules: [
-		// '@nuxtjs/axios',
 		'@nuxtjs/style-resources',
 		'@nuxtjs/svg',
-		['@nuxtjs/svg-sprite', {
-			elementClass: 'svg-icon',
-			spriteClassPrefix: '',
-		}],
+		// ['@nuxtjs/svg-sprite', {
+		// 	elementClass: 'svg-icon',
+		// 	spriteClassPrefix: '',
+		// }],
 		['@nuxt/image', {
 			dir: 'static/images',
 			staticFilename: '[publicPath]/images/[name]-[hash][ext]',
@@ -129,10 +115,6 @@ export default {
 			'~/assets/styles/_mixins.scss',
 		],
 	},
-	// axios: {
-	// 	baseURL: '/',
-	// },
-
 	router: {
 		prefetchLinks: false,
 		linkActiveClass: 'layout__link--active',
