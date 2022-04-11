@@ -6,7 +6,7 @@
 			width="718px"
 			height="620px"
 			src="gate-bg@2x.jpg"
-			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
+			sizes="xs:100vw sm:100vw md:100vw" />
 
 		<nuxt-picture
 			v-parallax="0.15"
@@ -41,7 +41,7 @@
 			height="279px"
 			loading="lazy"
 			src="shard-top@2x.png"
-			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
+			sizes="xs:248 sm:496" />
 
 		<div
 			class="shard-shape">

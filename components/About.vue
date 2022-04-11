@@ -24,7 +24,7 @@
 				width="360"
 				height="400"
 				src="about@2x.jpg"
-				sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
+				sizes="xs:100vw sm:100vw md:100vw" />
 			<h2
 				class="h2">
 				Уникальное место, <br>
