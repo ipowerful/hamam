@@ -10,17 +10,32 @@
 			src="gate-bg@2x.jpg"
 			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 
-		<div
+		<nuxt-picture
 			v-parallax="0.2"
-			class="petal7" />
+			class="petal7"
+			loading="lazy"
+			width="61px"
+			height="142px"
+			src="petal-7.png"
+			sizes="xs:61" />
 
-		<div
+		<nuxt-picture
 			v-parallax="0.3"
-			class="petal8" />
+			class="petal8"
+			loading="lazy"
+			width="115px"
+			height="109px"
+			src="petal-8.png"
+			sizes="xs:115" />
 
-		<div
-			v-parallax="0.05"
-			class="petal9" />
+		<nuxt-picture
+			v-parallax="0.5"
+			class="petal9"
+			loading="lazy"
+			width="180px"
+			height="207px"
+			src="petal-9.png"
+			sizes="xs:180" />
 
 		<nuxt-picture
 			class="shard"
@@ -28,7 +43,7 @@
 			height="298px"
 			loading="lazy"
 			src="shard-bottom@2x.png"
-			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
+			sizes="xs:248" />
 
 		<div
 			class="shard-shape">
@@ -39,7 +54,7 @@
 
 <script>
 import GateSvg from '@/assets/svg/gate-bottom.svg?inline'
-import ClipPathSvg from '@/assets/svg/gate-bottom-clip-path.svg?inline'
+import ClipPathSvg from '@/assets/svg-path/gate-bottom-clip-path.svg?inline'
 
 export default {
 	components: {
@@ -68,11 +83,8 @@ export default {
 	.petal7 {
 		z-index: 10;
 		position: absolute;
-		width: 61px;
-		height: 142px;
 		right: 0;
 		top: -14%;
-		background: url('~assets/images/petal-7.png') no-repeat;
 	}
 
 	.petal8 {
@@ -80,9 +92,6 @@ export default {
 		z-index: 15;
 		left: 23%;
 		bottom: -27%;
-		width: 115px;
-		height: 109px;
-		background: url('~assets/images/petal-8.png') no-repeat;
 	}
 
 	.petal9 {
@@ -90,9 +99,6 @@ export default {
 		z-index: 1;
 		left: 2%;
 		bottom: -18%;
-		width: 180px;
-		height: 207px;
-		background: url('~assets/images/petal-9.png') no-repeat;
 	}
 
 	.shard {

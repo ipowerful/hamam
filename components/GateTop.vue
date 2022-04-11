@@ -8,17 +8,32 @@
 			src="gate-bg@2x.jpg"
 			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 
-		<div
+		<nuxt-picture
 			v-parallax="0.15"
-			class="petal4" />
+			class="petal4"
+			loading="lazy"
+			width="99px"
+			height="159px"
+			src="petal-4.png"
+			sizes="xs:99" />
 
-		<div
+		<nuxt-picture
 			v-parallax="0.35"
-			class="petal5" />
+			class="petal5"
+			loading="lazy"
+			width="115px"
+			height="108px"
+			src="petal-5.png"
+			sizes="xs:115" />
 
-		<div
+		<nuxt-picture
 			v-parallax="0.2"
-			class="petal6" />
+			class="petal6"
+			loading="lazy"
+			width="65px"
+			height="62px"
+			src="petal-6.png"
+			sizes="xs:65" />
 
 		<nuxt-picture
 			class="shard"
@@ -39,7 +54,7 @@
 
 <script>
 import GateSvg from '@/assets/svg/gate-top.svg?inline'
-import ClipPathSvg from '@/assets/svg/gate-top-clip-path.svg?inline'
+import ClipPathSvg from '@/assets/svg-path/gate-top-clip-path.svg?inline'
 
 export default {
 	components: {
@@ -69,11 +84,8 @@ export default {
 	.petal4 {
 		position: absolute;
 		z-index: 10;
-		left: 0%;
+		left: 0;
 		top: 25%;
-		width: 99px;
-		height: 159px;
-		background: url('~assets/images/petal-4.png') no-repeat;
 	}
 
 	.petal5 {
@@ -81,19 +93,13 @@ export default {
 		z-index: 2;
 		left: 15.5%;
 		top: 65%;
-		width: 115px;
-		height: 108px;
-		background: url('~assets/images/petal-5.png') no-repeat;
 	}
 
 	.petal6 {
 		z-index: 10;
 		position: absolute;
-		width: 65px;
-		height: 62px;
 		right: 7%;
 		top: 7%;
-		background: url('~assets/images/petal-6.png') no-repeat;
 	}
 
 	.shard {

@@ -26,7 +26,6 @@
 				src="about@2x.jpg"
 				sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 			<h2
-				v-parallax="0.1"
 				class="h2">
 				Уникальное место, <br>
 				где вы можете

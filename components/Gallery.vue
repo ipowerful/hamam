@@ -53,6 +53,7 @@ export default {
 <style lang="scss">
 .gallery {
 	background: $color-blue;
+	position: relative;
 
 	.backdrop {
 		img {
@@ -66,7 +67,7 @@ export default {
 		z-index: 1;
 		background: url('~assets/svg/gallery-overlay.svg') bottom repeat-x;
 	}
-	
+
 	.hooper {
 		height: auto;
 

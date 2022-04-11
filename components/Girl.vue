@@ -8,17 +8,32 @@
 			src="girl-bg@2x.jpg"
 			sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
 
-		<div
+		<nuxt-picture
 			v-parallax="0.25"
-			class="petal1" />
+			class="petal1"
+			loading="lazy"
+			width="127px"
+			height="209px"
+			src="petal-1.png"
+			sizes="xs:127" />
 
-		<div
+		<nuxt-picture
 			v-parallax="0.2"
-			class="petal2" />
+			class="petal2"
+			loading="lazy"
+			width="123px"
+			height="250px"
+			src="petal-2.png"
+			sizes="xs:123" />
 
-		<div
+		<nuxt-picture
 			v-parallax="0.1"
-			class="petal3" />
+			class="petal3"
+			loading="lazy"
+			width="111px"
+			height="144px"
+			src="petal-3.png"
+			sizes="xs:111" />
 
 		<nuxt-picture
 			class="body"
@@ -36,7 +51,7 @@
 				width="456px"
 				height="438px"
 				src="steam-1.png"
-				sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
+				sizes="xs:456" />
 
 			<nuxt-picture
 				v-parallax="0.08"
@@ -45,7 +60,7 @@
 				width="351px"
 				height="289px"
 				src="steam-1.png"
-				sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw wide:100vw" />
+				sizes="xs:351" />
 		</div>
 	</div>
 </template>
@@ -68,6 +83,36 @@
 		overflow: hidden;
 	}
 
+	.petal1 {
+		position: absolute;
+		left: 5%;
+		bottom: -4%;
+		z-index: 1;
+	}
+
+	.petal2 {
+		z-index: 10;
+		position: absolute;
+		left: 0;
+		top: 27%;
+	}
+
+	.petal3 {
+		z-index: 10;
+		position: absolute;
+		right: 0;
+		top: 7%;
+	}
+
+	.body {
+		@include abs;
+		z-index: 1;
+
+		img {
+			@include img-fluid;
+		}
+	}
+
 	.steam1 {
 		position: absolute;
 		left: -50%;
@@ -84,45 +129,5 @@
 		height: 289px;
 		z-index: 2;
 	}
-
-	.petal1 {
-		position: absolute;
-		width: 127px;
-		height: 209px;
-		left: 5%;
-		bottom: -4%;
-		z-index: 1;
-		background: url('~assets/images/petal-1.png') no-repeat;
-	}
-
-	.petal2 {
-		z-index: 10;
-		position: absolute;
-		width: 123px;
-		height: 250px;
-		left: 0;
-		top: 27%;
-		background: url('~assets/images/petal-2.png') no-repeat;
-	}
-
-	.petal3 {
-		z-index: 10;
-		position: absolute;
-		width: 111px;
-		height: 144px;
-		right: 0;
-		top: 7%;
-		background: url('~assets/images/petal-3.png') no-repeat;
-	}
-
-	.body {
-		@include abs;
-		z-index: 1;
-
-		img {
-			@include img-fluid;
-		}
-	}
-
 }
 </style>

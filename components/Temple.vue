@@ -24,7 +24,7 @@
 
 <script>
 import Observer from '@/components/Observer.vue'
-import TempleSvg from '~/assets/svg/temple-animated.svg?inline'
+import TempleSvg from '~/assets/svg-path/temple-animated.svg?inline'
 
 export default {
 	components: {
