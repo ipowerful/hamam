@@ -17,7 +17,9 @@ https://main--charming-travesseiro-d30662.netlify.app/
 - CSS3
 - SCSS
 - Bootstrap (grid-framework only)
+- Vue.js
 - Nuxt.js
+- Netlify
 - JAMStack :)
 
 ## Features
