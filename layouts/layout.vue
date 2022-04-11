@@ -64,7 +64,7 @@ body {
 	min-width: $body-min-width;
 	font: 300 rem(18px)/rem(30px) $ff-base;
 
-	background: $color-yellow;
+	background: $color-blue;
 	color: $color-base;
 }
 </style>
