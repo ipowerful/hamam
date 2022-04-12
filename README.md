@@ -6,6 +6,11 @@ That's what he's got.
 
 <img width="406" alt="Screenshot 2022-04-09 at 08 39 17" src="https://user-images.githubusercontent.com/9405660/162558176-c68d23de-1dc8-4401-8fec-3f790343d09b.png">
 
+
+The page is pretty well optimized.
+
+<img width="747" alt="image" src="https://user-images.githubusercontent.com/9405660/162905422-dcf8598b-f741-4fb7-a1de-900027d755d9.png">
+
 STILL MOBILE VERSION ONLY
 
 It's alive! ✨
