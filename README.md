@@ -4,12 +4,13 @@ One of my clients requested a promo page for his wellness website.
 
 That's what he's got.
 
-<img width="406" alt="Screenshot 2022-04-09 at 08 39 17" src="https://user-images.githubusercontent.com/9405660/162558176-c68d23de-1dc8-4401-8fec-3f790343d09b.png">
+<img width="406" alt="Hamam Screenshot" src="https://user-images.githubusercontent.com/9405660/162558176-c68d23de-1dc8-4401-8fec-3f790343d09b.png">
 
+## Website Speed Optimization
 
 The page is pretty well optimized.
 
-<img width="747" alt="image" src="https://user-images.githubusercontent.com/9405660/162905422-dcf8598b-f741-4fb7-a1de-900027d755d9.png">
+![image](https://user-images.githubusercontent.com/9405660/162906681-91dbf8c6-b1f3-4123-9f03-7144ba56f7de.png)
 
 STILL MOBILE VERSION ONLY
 
