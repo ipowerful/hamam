@@ -5,18 +5,16 @@
 	letter-spacing: -1.4px;
 	text-transform: uppercase;
 	position: relative;
-	padding-bottom: 23px;
-	margin-bottom: 20px;
 	overflow: hidden;
 
 	&:after {
 		content: '';
 		position: absolute;
-		width: 100px;
+		width: 95px;
 		height: 1px;
 		background: $color-gold;
 		left: 0;
-		bottom: 1px;
+		bottom: 0;
 		overflow: hidden;
 		transition: $transition-slow;
 		transition-delay: .8s;
@@ -35,6 +33,7 @@
 	color: $white;
 
 	span {
+		display: inline-block;
 		color: $color-gold;
 	}
 }
@@ -56,7 +55,7 @@
 		left: 0;
 		bottom: 0;
 		transition: $transition-slow;
-		transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-110%, 0, 0);
 	}
 
 	&.active {
@@ -64,6 +63,14 @@
 			transform: translate3d(0, 0, 0);
 		}
 	}
+}
+
+@mixin desk-h1() {
+	font: rem(150px)/rem(191px) $ff-heading;
+}
+
+@mixin desk-h2() {
+	font: rem(70px)/rem(80px) $ff-heading;
 }
 
 /************* Position *************/
@@ -88,6 +95,13 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
+}
+
+@mixin absolute-center() {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 

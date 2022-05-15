@@ -1,33 +1,33 @@
 <template>
 	<div>
-		<top />
-		<temple />
-		<girl />
-		<gate-top />
-		<about />
-		<gate-bottom />
-		<gallery />
+		<top-section />
+		<temple-section />
+		<girl-section />
+		<gate-section-top />
+		<about-section />
+		<gate-section-bottom />
+		<gallery-section />
 	</div>
 </template>
 
 <script>
-import Top from '@/components/Top.vue'
-import Temple from '@/components/Temple.vue'
-import Girl from '@/components/Girl.vue'
-import GateTop from '@/components/GateTop.vue'
-import GateBottom from '@/components/GateBottom.vue'
-import About from '@/components/About.vue'
-import Gallery from '@/components/Gallery.vue'
+import TopSection from '@/components/TopSection.vue'
+import TempleSection from '@/components/TempleSection.vue'
+import GirlSection from '@/components/GirlSection.vue'
+import GateSectionTop from '@/components/GateSectionTop.vue'
+import GateSectionBottom from '@/components/GateSectionBottom.vue'
+import AboutSection from '@/components/AboutSection.vue'
+import GallerySection from '@/components/GallerySection.vue'
 
 export default {
 	components: {
-		Top,
-		Temple,
-		Girl,
-		GateTop,
-		GateBottom,
-		About,
-		Gallery,
+		TopSection,
+		TempleSection,
+		GirlSection,
+		GateSectionTop,
+		GateSectionBottom,
+		AboutSection,
+		GallerySection,
 	},
 	layout: 'layout',
 }

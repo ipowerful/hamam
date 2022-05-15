@@ -1,6 +1,7 @@
 const FRONT_URL = process.env.FRONT_URL
 
 export default {
+	mode: 'universal',
 	target: 'static',
 	head: {
 		title: 'hamam',
@@ -78,10 +79,12 @@ export default {
 	modules: [
 		'@nuxtjs/style-resources',
 		'@nuxtjs/svg',
+		/* eslint-disable no-tabs */
 		// ['@nuxtjs/svg-sprite', {
 		// 	elementClass: 'svg-icon',
 		// 	spriteClassPrefix: '',
 		// }],
+		/* eslint-enable no-tabs */
 		['@nuxt/image', {
 			dir: 'static/images',
 			staticFilename: '[publicPath]/images/[name]-[hash][ext]',
@@ -90,9 +93,9 @@ export default {
 				sm: 576,
 				md: 768,
 				lg: 992,
-				xl: 1200,
-				xxl: 1400,
+				xl: 1440,
 				wide: 1920,
+				'2k': 2880,
 			},
 		}],
 		['nuxt-polyfill', {
